@@ -17,7 +17,7 @@ import {
   useEpisodeFiles,
   useSearch,
   useServers,
-  useepisode,
+  useepisodeDownload,
 } from "../../hooks/useConsumet";
 export default function WatchAnime() {
   const [descIsCollapsed, setDescIsCollapsed] = useState(true);
@@ -230,7 +230,7 @@ export default function WatchAnime() {
           </div>
           <div>
            <a
-          href={episode?.download}
+          href={episodeDownload}
           target="_blank"
           className="px-2 py-1.5 rounded-sm self-end hover:scale-105 text-white bg-purple-500 font-normal text-xs md:text-base"
         >
