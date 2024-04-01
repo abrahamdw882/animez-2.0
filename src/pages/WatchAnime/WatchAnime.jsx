@@ -244,6 +244,13 @@ export default function WatchAnime() {
                 <h1 style={{ textAlign: "center" }} className="title-large">
                   {subIsSelected ? subInfo.title : dubInfo.title}
                 </h1>
+                 <a
+          href={episode?.download}
+          target="_blank"
+          className="px-2 py-1.5 rounded-sm self-end hover:scale-105 text-white bg-purple-500 font-normal text-xs md:text-base"
+        >
+          Download
+        </a>
 
                 <p>
                   {subIsSelected
@@ -263,6 +270,7 @@ export default function WatchAnime() {
               </div>
             </div>
           </div>
+          
         </motion.div>
       ) : !(subInfo && dubInfo) ? (
         <Error />
