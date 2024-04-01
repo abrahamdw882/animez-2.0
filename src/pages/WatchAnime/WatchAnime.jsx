@@ -17,7 +17,7 @@ import {
   useEpisodeFiles,
   useSearch,
   useServers,
-  useepisodeDownload,
+  useEpisodeDownload,
 } from "../../hooks/useConsumet";
 export default function WatchAnime() {
   const [descIsCollapsed, setDescIsCollapsed] = useState(true);
