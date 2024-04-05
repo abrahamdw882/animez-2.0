@@ -44,6 +44,19 @@ export default function Actions({ isInSidebar }) {
           </a>
         </span>
       )}
+      {/* New button */}
+      <button>
+        <a
+          href="https://animetopic786.blogspot.com/?m=0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BLOG
+        </a>
+      </button>
     </div>
   );
-}
+          }
+    </div>
+  );
+}%
