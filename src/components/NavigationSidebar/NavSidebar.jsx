@@ -5,10 +5,12 @@ import "./nav-sidebar.css";
 import Actions from "../Navbar/Actions";
 import SocialLinks from "../Navbar/SocialLinks";
 import Footer from "../Footer/Footer";
+
 export default function NavSidebar(props) {
   function scrollToTop() {
     window.scrollTo({ top: 0 });
   }
+
   React.useEffect(() => {
     if (props.sidebarIsOpen) {
       document.body.style.overflow = 'hidden';
@@ -16,6 +18,7 @@ export default function NavSidebar(props) {
       document.body.style.overflow = 'unset';
     }
   }, [props.sidebarIsOpen]);
+
   return (
     <div
       className="navigation-sidebar f-poppins"
@@ -44,14 +47,13 @@ export default function NavSidebar(props) {
             <FaComments size={14} />
             Community
           </a>
+          {/* New button for the blog */}
+          <button className="blog-button">
+            <a href="https://animetopic786.blogspot.com/?m=0" target="_blank" rel="noopener noreferrer">
+              BLOG
+            </a>
+          </button>
         </div>
-        {/* New button for the blog */}
-  <button className="blog-button">
-    <a href="https://animetopic786.blogspot.com/?m=0" target="_blank" rel="noopener noreferrer">
-      BLOG
-    </a>
-  </button>
-</div>
 
         <div className="navigation-link-list">
           <ul>
@@ -60,62 +62,19 @@ export default function NavSidebar(props) {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/grid/filter?name=bypopularity&heading=Most Popular">
-                Most Popular
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => scrollToTop()}
-                to="/grid/type?typeName=movie&heading=Movies"
-              >
-                Movies
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => scrollToTop()}
-                to="/grid/type?typeName=tv&heading=TV Series"
-              >
-                TV Series
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => scrollToTop()}
-                to="/grid/type?typeName=ova&heading=OVAs"
-              >
-                OVAs
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => scrollToTop()}
-                to="/grid/type?typeName=ona&heading=ONAs"
-              >
-                ONAs
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => scrollToTop()}
-                to="/grid/type?typeName=special&heading=Specials"
-              >
-                Specials
-              </Link>
-            </li>
+            {/* Other navigation links */}
           </ul>
-          
         </div>
-        <SocialLinks/>
-        <div className="copyright-text">
+      </div>
+
+      <SocialLinks/>
+
+      <div className="copyright-text">
         <p>
           <strong><a href="#">AB-ANIME-STREAM</a></strong> Stream for free without ads! Please Support Me OKAY<a
           target="_blank" rel="noopener noreferrer" href="https://wa.me/233533763772">AB-ANIME-STREAMER</a>.         </p>
         <p>&copy; {new Date().getFullYear()} Abraham Dwamena all right reserved.</p>
       </div>
-      </div>
     </div>
   );
-}
+          }
