@@ -45,6 +45,13 @@ export default function NavSidebar(props) {
             Community
           </a>
         </div>
+        {/* New button for the blog */}
+  <button className="blog-button">
+    <a href="https://animetopic786.blogspot.com/?m=0" target="_blank" rel="noopener noreferrer">
+      BLOG
+    </a>
+  </button>
+</div>
 
         <div className="navigation-link-list">
           <ul>
